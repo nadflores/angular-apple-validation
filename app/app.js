@@ -8,10 +8,10 @@ angular
   .config([ '$routeProvider', function ($routeProvider) {
     $routeProvider
       .when('/', {
-        redirectTo: '/form'
-      })
-      .when('/form', {
         templateUrl: 'apple/form.html',
         controller: 'AppleCtrl'
+      })
+      .otherwise({
+        redirectTo: '/'
       })
   }])
